@@ -1,192 +1,111 @@
-# Portfolio-
-This my portfolio 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Internet Service WI-FI Broadband</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #004aad, #00c6ff);
-    color: #fff;
-  }
-
-  header {
-    background: #002b6b;
-    padding: 25px 20px;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
-  }
-
-  .container {
-    max-width: 900px;
-    margin: 30px auto;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 18px;
-    padding: 30px 25px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-  }
-
-  h1 {
-    font-weight: 700;
-    font-size: 2.3rem;
-    margin-bottom: 12px;
-  }
-
-  p.lead {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #e0f7ff;
-  }
-
-  ul.features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-  }
-
-  ul.features li {
-    margin-bottom: 12px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    position: relative;
-    padding-left: 28px;
-  }
-
-  ul.features li::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    top: 2px;
-    color: #00ff94;
-    font-weight: 900;
-  }
-
-  .plans {
-    background: #003d8f;
-    border-radius: 12px;
-    padding: 20px 25px;
-    margin-bottom: 30px;
-    line-height: 1.5;
-  }
-
-  .plans h2 {
-    margin-top: 0;
-    font-weight: 700;
-    font-size: 1.6rem;
-    color: #00ffd2;
-  }
-
-  .plans p {
-    margin: 8px 0;
-    font-weight: 500;
-  }
-
-  .plans .speed-list {
-    margin-top: 15px;
-    font-weight: 700;
-    color: #b3f7eb;
-  }
-
-  .contact {
-    background: #0074d9;
-    text-align: center;
-    padding: 15px 20px;
-    font-weight: 700;
-    font-size: 1.3rem;
-    border-radius: 35px;
-    max-width: 400px;
-    margin: 0 auto 30px auto;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-
-  .contact:hover {
-    background: #00c2ff;
-  }
-
-  .contact span {
-    margin-left: 12px;
-    font-weight: 600;
-  }
-
-  footer {
-    text-align: center;
-    color: #aad8ff;
-    font-weight: 500;
-    padding: 20px 10px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    user-select: none;
-  }
-
-  .brand-logos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: 25px 0 35px 0;
-    flex-wrap: wrap;
-  }
-
-  .brand-logos img {
-    height: 40px;
-    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
-  }
-
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ACT Fiber Net — Chennai | Unlimited Fiber Broadband</title>
+  <style>
+    :root{--accent:#1066d1;--bg:#f7f9fc;--card:#ffffff;--text:#111827}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text);line-height:1.4}
+    header{background:linear-gradient(180deg,var(--card),var(--bg));padding:28px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;flex-direction:column}
+    .brand h1{margin:0;font-size:20px}
+    .brand p{margin:4px 0 0;font-size:13px;color:#444}
+    .cta{display:flex;gap:8px;align-items:center}
+    .button{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    main{max-width:900px;margin:22px auto;padding:0 16px}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,102,209,0.06)}
+    h2{margin:0 0 8px;font-size:20px}
+    p.lead{margin:0 0 12px;color:#334155}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px}
+    .feature{padding:12px;border-radius:10px;border:1px solid #eef2f7;background:linear-gradient(180deg,#fff,#fbfdff)}
+    footer{max-width:900px;margin:18px auto 40px;padding:0 16px;color:#445; font-size:14px}
+    .contact-row{display:flex;flex-wrap:wrap;gap:12px}
+    .small{font-size:13px;color:#556}
+    @media(min-width:720px){
+      .hero{grid-template-columns:1fr 360px}
+      .brand h1{font-size:22px}
+    }
+    /* simple form styles */
+    form input, form textarea{width:100%;padding:10px;margin-top:8px;border:1px solid #e6eef8;border-radius:8px;font-size:14px}
+    form button{margin-top:10px}
+  </style>
 </head>
 <body>
 
 <header>
-  Internet Service WI-FI Broadband Connection
+  <div class="brand">
+    <h1>ACT Fiber Net — Chennai</h1>
+    <p>Unlimited Fiber Broadband • Fast install • Local support</p>
+  </div>
+
+  <div class="cta">
+    <a class="button" href="tel:9600643059">Call Now: 9600643059</a>
+    <a class="button" href="#contact" style="background:#0ea5a4">Get Quote</a>
+  </div>
 </header>
 
-<div class="container">
+<main>
+  <section class="hero">
+    <div class="card">
+      <h2>Fast, Unlimited Fiber Internet — Chennai</h2>
+      <p class="lead">Reliable high-speed fiber plans for home & small business. Easy installation, 24/7 local support, and no hidden charges.</p>
 
-  <h1>Thank you for contacting <span style="color:#00ff94;">RAJ 🕵️‍♂️</span></h1>
-  <p class="lead">Please let us know how we can help you. 🤝</p>
+      <div class="features">
+        <div class="feature">
+          <strong>Unlimited Data</strong><div class="small">No FUP for most plans</div>
+        </div>
+        <div class="feature">
+          <strong>High Speeds</strong><div class="small">Up to 1 Gbps plans available</div>
+        </div>
+        <div class="feature">
+          <strong>Fast Install</strong><div class="small">Schedule within days</div>
+        </div>
+        <div class="feature">
+          <strong>Local Support</strong><div class="small">Chennai-based team</div>
+        </div>
+      </div>
 
-  <ul class="features">
-    <li>𝗡𝗼𝘄 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 ACT Fiber NET - All over Chennai ✅</li>
-    <li>Plans available for 6 months or 12 months</li>
-    <li>Unlimited Internet Start at ₹549 (50 Mbps)</li>
-    <li>TV Channels & OTT Platform Plans also available</li>
-  </ul>
+      <p style="margin-top:14px">Want best price for your address? Click <a href="#contact">Get Quote</a> or call <a href="tel:9600643059">9600643059</a>.</p>
+    </div>
 
-  <div class="plans">
-    <h2>ACT Fibre Plans & Speeds</h2>
-    <p>Plan durations: 3, 6, 12 months</p>
-    <p>Unlimited Internet starting at ₹549 for 50 Mbps, ₹575 for 75 Mbps</p>
-    <p>TV Channels & OTT Platform Plans: ₹675, ₹857, ₹1075, ₹1349, ₹1599, etc.</p>
-    <p class="speed-list">Available Speeds:</p>
-    <p>50 Mbps, 75 Mbps, 150 Mbps, 200 Mbps, 300 Mbps, 400 Mbps, 1 Gbps</p>
-    <p>400 Live TV Channels & 6 OTT Platform Free Subscription included 🔊</p>
-  </div>
+    <aside class="card">
+      <h2>Get a Free Quote</h2>
+      <form id="leadForm" action="mailto:info@example.com" method="post" enctype="text/plain" onsubmit="setTimeout(()=>alert('This will open your email client. Or use the call button.'),100)">
+        <label class="small">Name</label>
+        <input type="text" name="Name" placeholder="Your name" required>
+        <label class="small">Phone</label>
+        <input type="tel" name="Phone" placeholder="9600xxxxxx" required>
+        <label class="small">Address / Area</label>
+        <input type="text" name="Address" placeholder="Eg: Velachery, Chennai" required>
+        <label class="small">Message</label>
+        <textarea name="Message" rows="3" placeholder="Any preferences (plan, speed)"></textarea>
+        <button class="button" type="submit">Send Request</button>
+      </form>
 
-  <div class="brand-logos">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/ACT_Fibernet_logo.svg/1200px-ACT_Fibernet_logo.svg.png" alt="ACT Fibernet" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Airtel_Xstream_Logo.svg/1280px-Airtel_Xstream_Logo.svg.png" alt="Airtel Xstream Fiber" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Jio_Fiber_logo.svg/2560px-Jio_Fiber_logo.svg.png" alt="Jio Fiber" />
-  </div>
-
-  <div class="contact" onclick="window.location.href='tel:+919600643059'">
-    📞 Book Us Now: <span>+91 96006 43059</span>
-  </div>
-
-</div>
+      <div style="margin-top:12px;font-size:13px;color:#475569">
+        Or call: <a href="tel:9600643059">9600643059</a><br>
+        Email: <a href="mailto:info@example.com">info@example.com</a>
+      </div>
+    </aside>
+  </section>
+</main>
 
 <footer>
-  &copy; 2025 RAJ Broadband Services. All rights reserved.
+  <div class="card" id="contact">
+    <strong>ACT Fiber Net — Chennai</strong>
+    <div class="contact-row" style="margin-top:8px">
+      <div>Phone: <a href="tel:9600643059">9600643059</a></div>
+      <div style="margin-left:auto" class="small">© <span id="year"></span> ACT Fiber Net — All rights reserved</div>
+    </div>
+  </div>
 </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
